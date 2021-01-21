@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <img src="D:\photos\pixiv\uncompress\20200611\Twitter\EZv8jayUEAAQ-xG.jpg" width="300" height="500" />
+    <p>我创建了一个指向
+        <a href="https://www.mozilla.org/zh-CN/" title="当鼠标指针悬停在链接上时，标题将作为提示信息出现。">Mozilla 主页</a>
+        的超链接。
+    </p>
+    <a href="https://www.mozilla.org/zh-CN/">
+        <!--可以将一些内容转换为链接，甚至是块级元素。例如你想要将一个图像转换为链接，你只需把图像元素放到<a></a>标签中间。-->
+        <img src="mozilla-image.png" alt="链接至 Mozilla 主页的 Mozilla 标志">
+    </a>
+</body>
+
+</html>
+<!--在真实的网站上，index.html 将会成为我们的主页或登录页面。
+超链接除了可以链接到文档外，也可以链接到HTML文档的特定部分（被称为文档片段）。
+要做到这一点，你必须首先给要链接到的元素分配一个id属性。-->
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h2 id="jump">I have an id attribute</h2>
+    <a href="#jump">I wanna jump to h2 using url + # + id name</a>
+    当链接到同一网站的其他位置时，你应该使用相对链接（当链接到另一个网站时，你需要使用绝对链接）
+    可能的情况下使用相对URL更有效。当使用绝对URL时，浏览器首先通过DNS（见万维网是如何工作的）查找服务器的真实位置，
+    然后再转到该服务器并查找所请求的文件。另一方面，相对URL，浏览器只在同一服务器上查找被请求的文件。
+    因此，如果你使用绝对URL而不是相对URL，你就会不断地让你的浏览器做额外的工作，这意味着它的效率会降低。
+
+    当您链接到要下载的资源而不是在浏览器中打开时，您可以使用 download 属性来提供一个默认的保存文件名
+    <a href="http://121.196.155.86/2.txt" download="1.txt">
+        下载文件而不是让浏览器打开它
+    </a>
+</body>
+
+</html>
