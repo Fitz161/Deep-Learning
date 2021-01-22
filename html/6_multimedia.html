@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+图片
+<html>
+
+<body>
+    src : source
+    <img src="D:\photos\pixiv\uncompress\20200611\Twitter\EZv8jayUEAAQ-xG.jpg" width="300" height="500"
+        alt="this is a image用于在图片无法显示或不能被看到的情况时显示" title="the title of the img" />
+    宽度和高度属性来指定你的图片的高度和宽度
+    如果你需要改变图片的尺寸，你应该使用CSS而不是HTML。
+    图片增加title属性 这会给我们一个鼠标悬停提示
+    <img src="D:\photos\pixiv\uncompress\20200611\Twitter\EZv8jayUEAAQ-xG.jp" width="300" height="500"
+        alt="this is a image用于在图片无法显示或不能被看到的情况时显示" />
+
+</body>
+
+</html>
+figure>和figcaption> 元素，它正是为此而被创造出来的：
+为图片提供一个语义容器，在标题和图片之间建立清晰的关联,即将图片和对应的一段说明文字放在一起
+<!DOCTYPE html>
+<html>
+
+<body>
+    <figure>
+        figure> 里不一定要是一张图片，只要是一个这样的独立内容单元 可以是几张图片、一段代码、音视频、方程、表格或别的。
+        <img src="D:\photos\pixiv\uncompress\20200611\Twitter\EZv8jayUEAAQ-xG.jpg" width="300" height="500"
+            alt="this is a image用于在图片无法显示或不能被看到的情况时显示" />
+        <figcaption>This is a figcaption</figcaption>
+        <figure>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="image.css">
+</head>
+
+<body>
+    按理说，CSS这种做法相对于 HTML 中插入图片的做法，可以更好地控制图片和设置图片的位置，那么为什么我们还要使用
+    HTML 图片呢？如上所述，CSS 背景图片只是为了装饰 — 如果你只是想要在你的页面上添加一些漂亮的东西，
+    来提升视觉效果，那 CSS 的做法是可以的。但是这样插入的图片完全没有语义上的意义，它们不能有任何备选文本，
+    也不能被屏幕阅读器识别。这就是 HTML 图片有用的地方了。
+
+    总而言之，如果图像对您的内容里有意义，则应使用HTML图像。 如果图像纯粹是装饰，则应使用CSS背景图片。
+</body>
+
+</html>
+
+视频video
+<video width="1920" height="1080" poster="D:\photos\pixiv\uncompress\20200611\Twitter\EZv8jayUEAAQ-xG.jpg"
+    src="D:\videos\anime_series\我的妹妹不可能那么可爱 第一季\《我的妹妹不可能那么可爱 第一季》第4话 我的妹妹哪有可能去夏日动漫祭_高清 1080P.mp" controls>
+    <p>你的浏览器不支持 HTML5 视频。可点击<a
+            href="D:\videos\anime_series\我的妹妹不可能那么可爱 第一季\《我的妹妹不可能那么可爱 第一季》第4话 我的妹妹哪有可能去夏日动漫祭_高清 1080P.mp4">此链接</a>观看</p>
+</video>
+poster
+这个属性指向了一个图像的URL，这个图像会在视频播放前显示。通常用于粗略的预览或者广告。
+width 和 height
+你可以用属性控制视频的尺寸，也可以用 CSS 来控制视频尺寸。 无论使用哪种方式，视频都会保持它原始的长宽比 —
+也叫做纵横比。如果你设置的尺寸没有保持视频原始长宽比，那么视频边框将会拉伸，而未被视频内容填充的部分，将会显示默认的背景颜色。
+同 img> 标签使用方式相同，src 属性指向你想要嵌入网页当中的视频资源，他们的使用方式完全相同。
+controls
+用户必须能够控制视频和音频的回放功能。你可以使用 controls 来包含浏览器提供的控件界面，
+同时你也可以使用合适的 JavaScript API 创建自己的界面。界面中至少要包含开始、停止以及调整音量的功能。
+video> 标签内的内容
+这个叫做后备内容 — 当浏览器不支持 video>
+标签的时候，就会显示这段内容，这使得我们能够对旧的浏览器提供回退内容。你可以添加任何后备内容，
+在这个例子中我们提供了一个指向这个视频文件的链接，从而使用户至少可以访问到这个文件，而不会局限于浏览器的支持。
+
+使用多个播放源以提高兼容性
+每个
+<source> 标签页含有一个 type 属性，这个属性是可选的，但是建议你添加上这个属性 —
+它包含了视频文件的 MIME types ，同时浏览器也会通过检查这个属性来迅速的跳过那些不支持的格式。
+如果你没有添加 type 属性，浏览器会尝试加载每一个文件，直到找到一个能正确播放的格式，
+这样会消耗掉大量的时间和资源。
+<!-- <video controls>
+    <source src="rabbit320.mp4" type="video/mp4">
+    <source src="rabbit320.webm" type="video/webm">
+    <p>你的浏览器不支持 HTML5 视频。可点击<a href="rabbit320.mp4">此链接</a>观看</p>
+  </video> -->
+
+音频
+<audio controls>
+    <source src="D:\CloudMusic\4円 - ぼくらのレットイットビー.mp3" type="audio/mp3">
+    <source src="viper.ogg" type="audio/ogg">
+    <p>你的浏览器不支持 HTML5 音频，可点击<a href="viper.mp3">此链接</a>收听。</p>
+</audio>
+用 <track> 标签链接 .vtt 文件， <track> 标签需放在 <audio> 或 <video> 标签当中，
+同时需要放在所有 <source> 标签之后。使用 kind 属性来指明是哪一种类型，
+如 subtitles 、 captions 、 descriptions，显示字幕
