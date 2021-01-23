@@ -1,0 +1,88 @@
+<!-- 每一个表格的内容都包含在这两个标签中 : table>table>.
+在表格中，最小的内容容器是单元格, 是通过 td> 元素创建的 ('td' 代表 'table data').
+单元格不会放置在彼此的下方, 而是自动与同一行上的其他单元格对齐. 每个 <td> 元素 创建一个单独单元格
+如果想让这一行停止增加，并让单元格从第二行开始，我们需要使用 <tr> 元素 ('tr' 代表 'table row'). -->
+为了将表格的标题在视觉上和语义上都能被识别为标题，你可以使用 <th> 元素 ('th' 代表 'table header').
+表格中的标题和单元格有 colspan 和 rowspan 属性，这两个属性可以决定这个格的宽度和高度占几个单元格
+colspan决定宽度，rowspan决定高度
+
+HTML有一种方法可以定义整列数据的样式信息：就是 col> 和 colgroup> 元素。 
+    或者使用一个复杂的选择器，比如 :nth-child()。
+我们可以只定义一次，在 col> 元素中。col> 元素被规定包含在 colgroup> 容器中，而colgroup>就在 table> 标签的下方
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Simple table</title>
+    <link href="table.css" rel="stylesheet" type="text/css">
+</head>
+<body>你可以为你的表格增加一个标题，通过 caption> 元素，再把 caption> 
+    元素放入 <table> 元素中. 你应该把它放在table> 标签的下面。
+    <table>
+        <caption>This is a caption</caption>
+        <colgroup>
+            span 需要一个无单位的数字值，用来制定你想要让这个样式应用到表格中多少列
+            <col>
+            <col style="background-color:#DCC48E; border:4px solid #C1437A; width: 42px;" span="2">
+          </colgroup>
+        <tr>
+            <td>&nbsp;</td>
+            <th scope="col">column head</th>
+            <th scope="col">column head</th> 
+            <th scope="col">column head</th>
+            <th scope="col">column head</th>
+        </tr>
+        <tr>
+            <th scope="row">row head</th>
+            <td>Hi, I'm your first cell.</td>
+            <td rowspan="2">row span</td>
+            <td>I'm your third cell.</td>
+            <td>I'm your fourth cell.</td>
+        </tr>
+        <tr>
+            <th scope="row">row head</th>
+            <td>Second row, first cell.</td>
+            <td colspan="2">col span</td>
+        </tr>
+
+    </table>
+    <table>
+        <tr>
+          <th colspan="2">Animals</th>
+        </tr>
+        <tr>
+          <th colspan="2">Hippopotamus</th>
+        </tr>
+        <tr>
+          <th rowspan="2">Horse</th>
+          <td>Mare</td>
+        </tr>
+        <tr>
+          <td>Stallion</td>
+        </tr>
+        <tr>
+          <th colspan="2">Crocodile</th>
+        </tr>
+        <tr>
+          <th rowspan="2">Chicken</th>
+          <td>Hen</td>
+        </tr>
+        <tr>
+          <td>Rooster</td>
+        </tr>
+      </table>
+</body>
+
+</html>
+
+表格定义得更加结构化,一个方法是使用 thead>, tfoot>,和 tbody>, 这些元素允许你把表格中的部分标记为表头、页脚、正文部分。
+thead> 需要嵌套在 table 元素中，放置在头部的位置，因为它通常代表第一行，第一行中往往都是每列的标题，
+但是不是每种情况都是这样的。如果你使用了 col>/colgroup> 元素，那么 thead>元素就需要放在它们的下面。
+tfoot> 需要嵌套在 table 元素中，放置在底部 (页脚)的位置，一般是最后一行，往往是对前面所有行的总结，
+比如，你可以按照预想的方式将tfoot>放在表格的底部，或者就放在 thead> 的下面。
+(浏览器仍将它呈现在表格的底部)
+tbody> 需要嵌套在 table 元素中，放置在 thead>的下面或者是 tfoot> 的下面，这取决于你如何设计你的结构。
+(tfoot>放在thead>下面也可以生效.)
+
+tbody> 总是包含在每个表中，如果你没有在代码中指定它，那就是隐式的
