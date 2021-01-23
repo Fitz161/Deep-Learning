@@ -1,0 +1,40 @@
+h1, .list_class {
+    color:red
+}
+li {/*none去除无序列表前的园点 */
+    list-style-type: square;
+}
+p.p_class {
+    color: rgb(93, 228, 172);
+}
+li em {/*选中处于li元素中的em元素*/
+    /*This selector will select any <em> element that is inside (a descendant of) an <li>*/
+    color: rgb(219, 217, 68);
+}
+h1 + p {
+    font-size: 200%;
+}
+a:visited {
+    color: pink;
+    text-decoration: none;
+}
+
+a:hover {
+    color: brown;
+    text-decoration: none;
+}
+  
+a:link {
+    color: green;
+}
+.outer {
+    border: 5px solid black;
+}
+  
+.box {
+    /*calc()函数。这个函数允许您在CSS中进行简单的计算*/
+    padding: 10px;
+    width: calc(90% - 300px);
+    background-color: rebeccapurple;
+    color: white;
+}
