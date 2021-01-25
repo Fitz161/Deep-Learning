@@ -1,7 +1,7 @@
 h1, .list_class {
     color:red
 }
-li {/*none去除无序列表前的园点 */
+li.list-style {/*none去除无序列表前的园点 */
     list-style-type: square;
 }
 p.p_class {
@@ -27,6 +27,7 @@ a:hover {
 a:link {
     color: green;
 }
+
 .outer {
     border: 5px solid black;
 }
@@ -37,4 +38,68 @@ a:link {
     width: calc(90% - 300px);
     background-color: rebeccapurple;
     color: white;
+}
+
+blockquote {
+    background-color: red;
+    border: 2px solid green;
+}
+
+.fix-this {
+    all:unset;
+}
+
+p.bolck {
+    border: 2px solid rebeccapurple; /*边框*/
+    padding: 5em; /*内边距*/
+    margin: 2em; /*外边距*/
+}
+
+ul.flex {
+  display: flex;
+  list-style: none;
+  border: 2px solid rgb(44, 199, 114);
+}
+
+span.block {
+  display: block;
+  border: 2px dashed rgb(219, 217, 68);
+} 
+
+li {
+    border: 2px dotted blue;
+    border-radius: 10px;
+    padding: 1em;
+}
+
+.links-list a {
+    background-color: rgb(179,57,81);
+    color: #fff;
+    text-decoration: none;
+    padding: 1em 2em;
+}
+/* 使用display: inline-block来设置内边距，让用户更容易点击链接。
+使用.links-list a选择器将display: inline-block添加到样式规则中，您将看到它是如何通过内边距推开其他元素来修复这个问题的。 */
+.links-list a:hover {
+    background-color: rgb(66, 28, 40);
+    color: #fff;
+}
+
+.a {
+    background-image: linear-gradient(105deg, rgba(0,249,255,1) 39%, rgba(51,56,57,1) 96%);
+  }
+  
+.b {
+    background-image: radial-gradient(circle, rgba(0,249,255,1) 39%, rgba(51,56,57,1) 96%);
+    background-size: 100px 30px;
+}
+div h2 {
+    background-color: rgba(0,0,0,.5);
+    color: white;
+}
+.bg-box {
+    border: 5px solid #000;
+    border-radius: 10px;
+    background-image: url(‪D:/photos/photos/2/-28e8a5e4ac40dac6.jpg);
+    background-size: contain;
 }
