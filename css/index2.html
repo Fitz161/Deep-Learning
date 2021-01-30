@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<title>Getting started with CSS</title>
+<link rel="stylesheet" href="styles2.css">
+<link href='https://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+
+<body>
+    em每一级都比上一级大1.3倍
+    <ul class="ems">
+        <li>One</li>
+        <li>Two</li>
+        <li>Three
+            <ul>
+                <li>Three A</li>
+                <li>Three B
+                    <ul>
+                        <li>Three B 2</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    rem每一级都是根元素（html）字体大小的1.3倍
+    <ul class="rems">
+        <li>One</li>
+        <li>Two</li>
+        <li>Three
+            <ul>
+                <li>Three A</li>
+                <li>Three B
+                    <ul>
+                        <li>Three B 2</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    都变为基元素字体大小的20%+1px<br /> font-size: calc(20% + 1px);background-color: hsl(233, 79%, 65%);
+    <ul class="percent">
+        <li>One</li>
+        <li>Two</li>
+        <li>Three
+            <ul>
+                <li>Three A</li>
+                <li>Three B
+                    <ul>
+                        <li>Three B 2</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <div class="wrapper">
+        html元素中class属性值多个空格分格,同时指定了多个CSS样式
+        <div class="one">hsl(188, 97%, 28%)</div>
+        <div class="two">hsl(321, 47%, 57%)</div>
+        <div class="three">hsl(174, 77%, 31%)</div>
+    </div>
+
+    <div class="box">this is a box </div>
+
+    <form>
+        <div><label for="name">Name</label>
+            <input type="text" id="name"></div>
+        <div><label for="email">Email</label>
+            <input type="email" id="email"></div>
+
+        <div class="buttons"><input type="submit" value="Submit"></div>
+    </form>
+
+    <table>
+        <caption>A summary of the UK's most famous punk bands</caption>
+        <thead>
+            <tr>
+                <th scope="col">Band</th>
+                <th scope="col">Year formed</th>
+                <th scope="col">No. of Albums</th>
+                <th scope="col">Most famous song</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">Buzzcocks</th>
+                <td>1976</td>
+                <td>9</td>
+                <td>Ever fallen in love (with someone you shouldn't've)</td>
+            </tr>
+            <tr>
+                <th scope="row">The Clash</th>
+                <td>1976</td>
+                <td>6</td>
+                <td>London Calling</td>
+            </tr>
+
+            ... some rows removed for brevity
+
+            <tr>
+                <th scope="row">The Stranglers</th>
+                <td>1974</td>
+                <td>17</td>
+                <td>No More Heroes</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th scope="row" colspan="2">Total albums</th>
+                <td colspan="2">77</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+
+</html>
