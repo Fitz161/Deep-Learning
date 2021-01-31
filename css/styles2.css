@@ -1,0 +1,143 @@
+html {
+    font-size: 16px;
+  }
+  
+  .ems li { 
+    font-size: 1.3em;
+    background-color: #c55da1;
+  }
+  
+  .rems li {
+    font-size: 1.3rem;
+    opacity: 0.8;
+    background-color: rgb(2, 121, 139);
+  }
+  .one {
+    background-color: hsl(188, 97%, 28%);
+  }
+  
+  .two {
+    background-color: hsl(321, 47%, 57%);
+  }
+  
+  .three {
+    background-color: hsl(174, 77%, 31%);
+  }
+    
+  .box {
+    width:400px;
+    padding: 1em;
+    border-radius: .5em;
+    border: 5px solid rebeccapurple;
+    background-color: lightblue;
+    opacity: 0.8;
+  }
+  
+  .box::after {
+    content: "This is a string. I know because it is quoted in the CSS."
+  }
+.percent {
+    font-size: calc(20% + 1px);
+    background-color: hsl(233, 79%, 65%);
+}
+input[type="text"],
+input[type="email"] {
+  border: 2px solid #000;
+  margin: 0 0 1em 0;
+  padding: 10px;
+  width: 100%;
+}
+
+input[type="submit"] {
+  border: 3px solid #333;
+  background-color: #999;
+  border-radius: 5px;
+  padding: 10px 2em;
+  font-weight: bold;
+  color: #fff;
+}
+
+input[type="submit"]:hover {
+  background-color: #333;
+}
+
+table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border: 3px solid purple;
+  }
+  
+  thead th:nth-child(1) {/*(thread th:nth-child)选择器选择thread的第n个th子元素
+    整个列宽度与列标题的宽度是一样的，这是一种很好的设定表列尺寸的方式*/
+    width: 30%;
+  }
+  
+  thead th:nth-child(2) {
+    width: 20%;
+  }
+  
+  thead th:nth-child(3) {
+    width: 15%;
+  }
+  
+  thead th:nth-child(4) {
+    width: 35%;
+  }
+  
+  th, td {
+    padding: 20px;
+    border:5px solid bisque;
+    /*<th>和<td>元素上设置了一些padding——这些元素使数据项有了一些空间，使表看起来更加清晰。*/
+  }
+  html {
+    font-family: 'helvetica neue', helvetica, arial, sans-serif;
+  }
+  
+  thead th, tfoot th {
+    font-family: 'Rock Salt', cursive;
+  }
+  
+  th {
+    letter-spacing: 2px;
+  }
+  
+  td {
+    letter-spacing: 1px;
+  }
+  
+  tbody td {
+    text-align: center;
+  }
+  
+  tfoot th {
+    text-align: right;
+  }
+  thead th, tfoot th, tfoot td {
+    background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.5));
+    border: 3px solid purple;
+    color: white;
+  }
+  tbody tr:nth-child(odd) {
+    background-color: #ff33cc;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #e495e4;
+  }
+  
+  
+  table {
+    background-color: #ff33cc;
+  }
+  caption {
+      /*caption-side属性，它被赋予了一个bottom的值。这就导致标题被放置在表格的底部
+      text-align文字设置对齐格式*/
+    font-family: 'Rock Salt', cursive;
+    padding: 20px;
+    font-style: italic;
+    caption-side: top;
+    color: #666;
+    text-align: center;
+    letter-spacing: 1px;
+  }
