@@ -1,0 +1,33 @@
+html {/*The first rule sets a sitewide font and a baseline font size of 10px. 
+    These are inherited by everything on the page.*/
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 10px;
+  }
+  
+  h2 {
+    font-size: 2rem;/*2*10px=20px   10px is inherited from html font-size*/
+  }
+  
+  ul,ol,dl,p {
+    font-size: 1.5rem;
+  }
+ul {
+    list-style-type: upper-roman;/*只对ul和ol起作用*/
+    list-style-position: inside;
+    padding-left: 2rem;
+}
+  li, p {/*Rule 4 sets the same line-height on the paragraphs and list items — 
+    so the paragraphs and each individual list item will have the same spacing between lines. 
+    This will also help to keep the vertical rhythm consistent.*/
+    line-height: 1.5;
+  }
+  
+  /* Description list styles */
+  
+  dd, dt {
+    line-height: 1.5;
+  }
+  
+  dt {
+    font-weight: bold;
+  }
