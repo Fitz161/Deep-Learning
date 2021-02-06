@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <title>互动标签示例</title>
+    <style>
+        p {
+            font-family: sans-serif;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            text-align: center;
+            border: 2px solid rgba(0, 0, 200, 0.6);
+            background: rgba(0, 0, 200, 0.3);
+            color: rgba(0, 0, 200, 0.6);
+            box-shadow: 1px 1px 2px rgba(0, 0, 200, 0.4);
+            border-radius: 10px;
+            padding: 3px 10px;
+            /* display: inline-block; */
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script>
+        function createParagraph2(){
+        const para = document.createElement('p');
+        para.textContent = '你点击了这个按钮！';
+        document.body.appendChild(para);
+        }
+    </script>
+    <!--内联js代码-->
+    <button onclick="createParagraph2()">点我呀2</button>
+
+    <p>玩家1：小明</p>
+    <script>
+        /*这里我们选定一个文本段落（第 1 行)，然后给它附上一个事件监听器（第 3 行），
+        使得在它被点击时，updateName() 代码块（code block） （5 – 8 行）便会运行。updateName() 
+        （这类可以重复使用的代码块称为“函数”）向用户请求一个新名字，然后把这个名字插入到段落中以更新显示。*/
+        const para = document.querySelector('p');
+        para.addEventListener('click', updateName);
+        function updateName() {
+            const name = prompt('输入一个新的名字：');
+            para.textContent = '玩家1：' + name;
+        }
+    </script>
+    <button>点我呀</button>
+    <script src="add_p.js" async></script>
+</body>
+
+</html>
